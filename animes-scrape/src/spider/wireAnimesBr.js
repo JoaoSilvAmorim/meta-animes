@@ -4,6 +4,8 @@ const axios = require('axios');
 const get_data = async (browser, page, link_data) => {
   let data_eps = new Array();
   let links = [];
+  console.log(page)
+  await page.screenshot({path: 'buddy-screenshot.png'});
   console.log('chegou aqui2222')
   try {
     links = await page.evaluate(() => {
