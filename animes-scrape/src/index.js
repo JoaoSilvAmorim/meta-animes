@@ -41,7 +41,7 @@ const runPuppeteer = async (link_data) => {
     await page.setViewport({ width: 1680, height: 1050 });
     await page.goto(link_data.url);
     await sleep(10000);
-    
+    console.log(link_data)
     try {
       const { site } = link_data;
       
