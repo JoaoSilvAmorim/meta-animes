@@ -4,7 +4,7 @@ const axios = require('axios');
 const get_data = async (browser, page, link_data) => {
   let data_eps = new Array();
   let links = [];
-  
+  console.log('chegou aqui2222')
   try {
     links = await page.evaluate(() => {
       return Array.from(document.querySelectorAll('.episodios > li > div.episodiotitle > a')).map((el) => el.href);
@@ -12,7 +12,7 @@ const get_data = async (browser, page, link_data) => {
   } catch (error) {
     return {'Error': 'WireAnimesBr' + error};
   }
-
+  console.log(links)
   if(links){
     const page_ep = await browser.newPage();
 

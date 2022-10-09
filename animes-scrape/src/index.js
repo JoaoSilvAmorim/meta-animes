@@ -44,9 +44,10 @@ const runPuppeteer = async (link_data) => {
     console.log(link_data)
     try {
       const { site } = link_data;
-      
+      console.log(site)
       switch (site) {
         case 'ANIMESBR':
+          console.log('chegou aqui1111')
           return await wireAnimesBr(browser, page, link_data);
   
         default:
